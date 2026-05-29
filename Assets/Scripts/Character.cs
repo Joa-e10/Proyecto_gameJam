@@ -1,10 +1,10 @@
 using UnityEngine;
 
-public class Characters : MonoBehaviour
+public abstract class Character : MonoBehaviour
 {
-    private int lives;
-    private int speed;
-    private Rigidbody2D _rb;
+    protected int lives;
+    protected int speed;
+    protected Rigidbody2D _rb;
 
     void Start()
     {
