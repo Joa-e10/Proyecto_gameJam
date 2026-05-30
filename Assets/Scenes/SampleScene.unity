@@ -268,10 +268,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2920774408675039720, guid: 3accf8dca11d8ae49be4daac5c0713f5, type: 3}
-      propertyPath: _bulletPlayer
-      value: 
-      objectReference: {fileID: 4247453749065612554, guid: 44d56a990c2365b44ac206cf8bcbe58c, type: 3}
     - target: {fileID: 7794129499166248633, guid: 3accf8dca11d8ae49be4daac5c0713f5, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.72185
