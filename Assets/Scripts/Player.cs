@@ -12,6 +12,7 @@ public class Player : Character
     private float _timeShooting = 1.5f;
     void Start()
     {
+        lives = 10;
         speed = 5;
         _cameraMain = Camera.main;
         _rb = GetComponent<Rigidbody2D>();
