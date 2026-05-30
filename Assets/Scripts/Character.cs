@@ -2,24 +2,35 @@ using UnityEngine;
 
 public abstract class Character : MonoBehaviour
 {
-    protected int lives;
+
+    [SerializeField] protected int health = 3;
     protected int speed;
     protected Rigidbody2D _rb;
 
-    void Start()
+    protected virtual void Awake()
     {
-        
+        _rb = GetComponent<Rigidbody2D>();
     }
 
-    public void die() 
+    public virtual void TakeDamage(int damage)
     {
-        if (lives <= 0) 
+        health -= damage;
+        
+
+        if (health <= 0)
         {
-            Destroy(gameObject);
+            Die();
         }
     }
-    void Update()
+
+    protected virtual void Update()
+    {
+
+    }
+
+    protected virtual void Die()
     {
         
+        Destroy(gameObject);
     }
 }

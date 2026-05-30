@@ -1,16 +1,21 @@
 using UnityEngine;
 
-public class Enemy : MonoBehaviour
+public class Enemy : Character
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    protected override void Update()
     {
-        
+        base.Update(); 
+        if (Input.GetKeyDown(KeyCode.T))
+        {
+            Debug.Log("Recibiciste daño");
+            TakeDamage(1);
+        }
+
     }
 
-    // Update is called once per frame
-    void Update()
+    protected override void Die()
     {
-        
+        Debug.Log("Te quedaste sin vidas y perdiste");
+        base.Die(); 
     }
 }
